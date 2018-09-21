@@ -1,0 +1,41 @@
+{
+  "name": "typescript-design-patterns",
+  "version": "0.0.1",
+  "description": "Design patterns implementations in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpressiani/typescript-design-patterns.git"
+  },
+  "keywords": [
+    "design",
+    "patterns",
+    "typescript"
+  ],
+  "author": "Riccardo Pressiani <riccardo.pressiani@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rpressiani/typescript-design-patterns/issues"
+  },
+  "homepage": "https://github.com/rpressiani/typescript-design-patterns#readme",
+  "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.1",
+    "typescript": "^3.0.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
+  }
+}

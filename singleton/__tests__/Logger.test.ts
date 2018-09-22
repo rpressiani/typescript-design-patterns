@@ -1,4 +1,5 @@
 import Logger from "../Logger";
+
 describe('Singleton tests', function() {
     it('Singleton instance is always the same', () => {
         const logger1 = Logger.getInstance();

@@ -23,11 +23,14 @@
   "homepage": "https://github.com/rpressiani/typescript-design-patterns#readme",
   "devDependencies": {
     "@types/jest": "^23.3.2",
+    "@types/node": "^10.10.3",
     "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
     "ts-jest": "^23.10.1",
     "typescript": "^3.0.3"
   },
   "jest": {
+    "silent": true,
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -36,6 +39,11 @@
     "transform": {
       "\\.(ts|tsx)$": "ts-jest"
     },
-    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
   }
 }

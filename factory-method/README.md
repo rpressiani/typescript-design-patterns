@@ -12,7 +12,7 @@ The `factory` directory contains all the classes related to the *creators*. The 
 ```
 tsc
 ```
-#### Run `demo.ts`
+#### Run `demo.js`
 ```
 node build/demo.js
 ```

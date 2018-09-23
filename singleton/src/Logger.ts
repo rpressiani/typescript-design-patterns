@@ -1,10 +1,13 @@
 export default class Logger {
     private static instance: Logger;
+    value: String;
 
-    private constructor() {}
-    public static getInstance() {
+    private constructor(value: String) {
+        this.value = value;
+    }
+    public static getInstance(value: String) {
         if (!Logger.instance) {
-            Logger.instance = new Logger();
+            Logger.instance = new Logger(value);
         }
         return Logger.instance;
     }

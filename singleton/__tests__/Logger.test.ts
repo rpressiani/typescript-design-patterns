@@ -1,4 +1,4 @@
-import Logger from "../Logger";
+import Logger from "../src/Logger";
 
 describe('Singleton tests', function() {
     it('Singleton instance is always the same', () => {

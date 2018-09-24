@@ -15,7 +15,5 @@ before_script:
   - ./cc-test-reporter before-build
 script:
   - npm test
-  - npm run coveralls
 after_script:
   - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
-  

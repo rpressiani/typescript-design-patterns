@@ -13,5 +13,4 @@ export interface TransportInterface {
     deliver();
     isEmpty();
     isDelivered();
-
 }

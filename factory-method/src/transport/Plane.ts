@@ -1,16 +1,11 @@
-import { TransportInterface, TransportTypes } from './TransportInterface';
-export class Plane implements TransportInterface {
-    
-    readonly type: TransportTypes;
-    readonly capacity: number;
-    private _empty: boolean;
-    private _delivered: boolean;
+import { TransportTypes } from './TransportInterface';
+import TransportBase from './TransportBase';
+
+export class Plane extends TransportBase {
 
     constructor(capacity: number) {
+        super(capacity);
         this.type = TransportTypes.PLANE;
-        this.capacity = capacity;
-        this._empty = true;
-        this._delivered = false;
     }
 
     load() {
@@ -26,13 +21,5 @@ export class Plane implements TransportInterface {
         } else {
             console.log("Plane should be loaded before deliver!");
         }
-    }
-
-    isEmpty() {
-        return this._empty;
-    }
-
-    isDelivered() {
-        return this._delivered;
     }
 }

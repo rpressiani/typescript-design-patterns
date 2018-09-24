@@ -4,8 +4,7 @@ import TransportBase from './TransportBase';
 export class Plane extends TransportBase {
 
     constructor(capacity: number) {
-        super(capacity);
-        this.type = TransportTypes.PLANE;
+        super(capacity, TransportTypes.PLANE);
     }
 
     load() {

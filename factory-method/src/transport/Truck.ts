@@ -4,8 +4,7 @@ import TransportBase from './TransportBase';
 export class Truck extends TransportBase {
 
     constructor(capacity: number) {
-        super(capacity);
-        this.type = TransportTypes.TRUCK;
+        super(capacity, TransportTypes.TRUCK);
     }
 
     load() {
@@ -13,7 +12,7 @@ export class Truck extends TransportBase {
         this._empty = false;
         console.log("Truck loaded");
     }
-    
+
     deliver() {
         if (this._empty === false) {
             console.log("Load delivered!");

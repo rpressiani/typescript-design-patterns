@@ -4,7 +4,7 @@ jobs:
         environment:
             CC_TEST_REPORTER_ID: 8228746e2f830eb644c0e1a60d7b206e9e7785b2fdbfe3efde959cdb647e08d2
         docker:
-            - image: circleci/node:10
+            - image: circleci/node
         steps:
             - checkout
             - run:
@@ -13,7 +13,7 @@ jobs:
             - restore_cache: # special step to restore the dependency cache
                 key: dependency-cache-{{ checksum "package.json" }}
             - run:
-                name: setup-dependencies
+                name: Setup Dependencies
                 command: npm install
             - save_cache: # special step to save the dependency cache
                 key: dependency-cache-{{ checksum "package.json" }}
@@ -25,8 +25,8 @@ jobs:
                     curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
                     chmod +x ./cc-test-reporter
             - run: # run tests
-                name: test
+                name: Run Test and Coverage
                 command: |
                     ./cc-test-reporter before-build
                     npm test
-                    ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
+                    ./cc-test-reporter after-build --exit-code $?

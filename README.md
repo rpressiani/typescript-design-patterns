@@ -1,5 +1,5 @@
 # Design Patterns by Example with TypeScript
-[![CircleCI](https://circleci.com/gh/rpressiani/typescript-design-patterns.svg?style=svg)](https://circleci.com/gh/rpressiani/typescript-design-patterns)
+[![Build Status](https://travis-ci.org/rpressiani/typescript-design-patterns.svg?branch=master)](https://travis-ci.org/rpressiani/typescript-design-patterns)
 
 ### Creational
 * [Factory Method](https://github.com/rpressiani/typescript-design-patterns/tree/master/factory-method)

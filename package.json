@@ -4,7 +4,7 @@
   "description": "Design patterns implementations in TypeScript",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -44,7 +44,8 @@
     "collectCoverage": true,
     "coverageReporters": [
       "json",
-      "html"
+      "html",
+      "lcov"
     ]
   }
 }

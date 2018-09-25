@@ -7,7 +7,7 @@ export default class LightToolbar extends ToolbarBase {
         super(height, Color.WHITE, links);
     }
     render() {
-        console.log(`I'm a LIGHT toolbar!\n${this.toString()}`);
+        return `I'm a LIGHT toolbar!\n${this.toString()}`;
     }
 
 }

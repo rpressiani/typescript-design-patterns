@@ -7,7 +7,7 @@ export default class DarkToolbar extends ToolbarBase {
         super(height, Color.BLUE, links);
     }
     render() {
-        console.log(`I'm a DARK toolbar!\n${this.toString()}`);
+        return `I'm a DARK toolbar!\n${this.toString()}`;
     }
 
 }

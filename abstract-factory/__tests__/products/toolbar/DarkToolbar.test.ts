@@ -11,4 +11,8 @@ describe('DarkToolbar', function () {
     it('DarkToolbar color is set to blue', () => {
         expect(toolbar.color).toBe(Color.BLUE);
     });
+
+    it('Render message is correct', () => {
+        expect(toolbar.render()).toBe("I'm a DARK toolbar!\n{10, 0, Links[Home,Contacts]}");
+    });
 })

@@ -14,7 +14,7 @@ export default abstract class ToolbarBase implements UIElementInterface {
         this._color = color;
     }
 
-    abstract render();
+    abstract render(): string;
 
     public toString = () : string => {
         return `{${this._height}, ${this._color}, Links[${this._links}]}`;

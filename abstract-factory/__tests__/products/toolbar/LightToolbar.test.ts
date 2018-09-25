@@ -4,7 +4,7 @@ import LightToolbar from '../../../src/products/toolbar/LightToolbar';
 describe('LightToolbar', function () {
     
     let toolbar: LightToolbar;
-    beforeEach(() => {
+    beforeAll(() => {
          toolbar = new LightToolbar(15, ["Home", "Products", "Contacts"])
     });
 

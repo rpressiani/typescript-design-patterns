@@ -4,7 +4,7 @@ import DarkToolbar from '../../../src/products/toolbar/DarkToolbar';
 describe('DarkToolbar', function () {
     
     let toolbar: DarkToolbar;
-    beforeEach(() => {
+    beforeAll(() => {
          toolbar = new DarkToolbar(10, ["Home", "Contacts"])
     });
 

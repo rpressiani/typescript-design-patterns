@@ -1,6 +1,13 @@
 import * as readline from 'readline';
-import * as shipments from './src/factory'
-import { TransportTypes } from './src/transport/TransportInterface'
+import * as shipments from './src/factory';
+import { GroundTransportTypes } from './src/factory/GroundShipment';
+
+enum TransportTypes {
+    TRAIN,
+    TRUCK,
+    PLANE,
+    SHIP,
+}
 
 readline.emitKeypressEvents(process.stdin);
 process.stdin.setRawMode(true);
@@ -20,10 +27,10 @@ process.stdin.on('keypress', (str, key) => {
         if (keyMap.has(str)) {
             switch (keyMap.get(str)) {
                 case TransportTypes.TRAIN:
-                    shipment = new shipments.GroundShipment(42, TransportTypes.TRAIN);
+                    shipment = new shipments.GroundShipment(42, GroundTransportTypes.TRAIN);
                     break;
                 case TransportTypes.TRUCK:
-                    shipment = new shipments.GroundShipment(42, TransportTypes.TRUCK);
+                    shipment = new shipments.GroundShipment(42, GroundTransportTypes.TRUCK);
                     break;
                 case TransportTypes.SHIP:
                     shipment = new shipments.SeaShipment(42);

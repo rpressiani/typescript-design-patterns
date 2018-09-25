@@ -1,5 +1,6 @@
 import { Shipment, GroundShipment } from '../../src/factory'
-import { TransportTypes } from '../../src/transport/TransportInterface';
+import { Truck, Train } from '../../src/transport';
+import { GroundTransportTypes } from '../../src/factory/GroundShipment';
 
 describe('GroundShipment', function () {
     
@@ -7,8 +8,8 @@ describe('GroundShipment', function () {
     let shipmentWithTrain: Shipment;
 
     beforeEach(() => {
-         shipmentWithTruck = new GroundShipment(42, TransportTypes.TRUCK);
-         shipmentWithTrain = new GroundShipment(42, TransportTypes.TRAIN);
+         shipmentWithTruck = new GroundShipment(42, GroundTransportTypes.TRUCK);
+         shipmentWithTrain = new GroundShipment(42, GroundTransportTypes.TRAIN);
     });
 
     it('Goods amount is set by constructor', () => {
@@ -18,11 +19,11 @@ describe('GroundShipment', function () {
     it('Transport type is set correctly', () => {
         shipmentWithTruck.send();
         shipmentWithTrain.send();
-        expect(shipmentWithTruck.transportType).toBe(TransportTypes.TRUCK);
-        expect(shipmentWithTrain.transportType).toBe(TransportTypes.TRAIN);
+        expect(shipmentWithTruck.getTransportType()).toBeInstanceOf(Truck);
+        expect(shipmentWithTrain.getTransportType()).toBeInstanceOf(Train);
     });
 
     it('Cannot create ground trasport of type not equal to ground transport', () => {
-        expect(() => (new GroundShipment(42, TransportTypes.SHIP)).send()).toThrowError();
+        expect(() => (new GroundShipment(42, 3)).send()).toThrowError();
     });
 })

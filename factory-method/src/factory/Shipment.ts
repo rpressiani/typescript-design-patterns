@@ -1,4 +1,4 @@
-import { TransportInterface, TransportTypes } from '../transport/TransportInterface';
+import { TransportInterface } from '../transport';
 
 export abstract class Shipment {
     private _goods: number;
@@ -16,8 +16,8 @@ export abstract class Shipment {
         this._transport.deliver();
     }
 
-    get transportType(): TransportTypes {
-        return this._transport.type;
+    getTransportType() {
+        return this._transport;
     }
 
     get goods(): number {

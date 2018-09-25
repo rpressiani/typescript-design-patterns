@@ -1,21 +1,24 @@
 import { Shipment } from './Shipment';
-import { TransportInterface, TransportTypes } from '../transport/TransportInterface';
-import { Train } from '../transport/Train';
-import { Truck } from '../transport/Truck';
+import { TransportInterface, Train, Truck } from '../transport';
+
+export enum GroundTransportTypes {
+    TRAIN,
+    TRUCK,
+}
 
 export class GroundShipment extends Shipment {
-    private _type: TransportTypes;
+    private _type: GroundTransportTypes;
 
-    constructor(goods: number, type: TransportTypes) {
+    constructor(goods: number, type: GroundTransportTypes) {
         super(goods);
         this._type = type;
     }
 
     protected addTransport(): TransportInterface {
         switch (this._type) {
-            case TransportTypes.TRAIN:
+            case GroundTransportTypes.TRAIN:
                 return new Train(this.goods);
-            case TransportTypes.TRUCK:
+            case GroundTransportTypes.TRUCK:
                 return new Truck(this.goods);
             default:
                 throw Error("Ground transport selected doesn't exist!");

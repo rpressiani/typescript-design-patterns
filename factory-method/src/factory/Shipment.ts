@@ -1,4 +1,4 @@
-import { TransportInterface } from '../transport';
+import { TransportInterface } from '../transports';
 
 export abstract class Shipment {
     private _goods: number;

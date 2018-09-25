@@ -24,7 +24,6 @@
   "devDependencies": {
     "@types/jest": "^23.3.2",
     "@types/node": "^10.10.3",
-    "coveralls": "^3.0.2",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "ts-jest": "^23.10.1",
@@ -46,6 +45,16 @@
       "json",
       "html",
       "lcov"
-    ]
+    ],
+    "collectCoverageFrom": [
+      "**/*.ts",
+      "!**/node_modules/**",
+      "!**/demo.ts"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    }
   }
 }

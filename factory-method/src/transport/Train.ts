@@ -1,11 +1,6 @@
-import { TransportTypes } from './TransportInterface';
 import TransportBase from './TransportBase';
 
-export class Train extends TransportBase {
-
-    constructor(capacity: number) {
-        super(capacity, TransportTypes.TRAIN);
-    }
+export default class Train extends TransportBase {
 
     load() {
         console.log("Loading train...");

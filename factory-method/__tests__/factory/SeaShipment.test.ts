@@ -1,5 +1,5 @@
 import { Shipment, SeaShipment } from '../../src/factory';
-import { TransportTypes } from '../../src/transport/TransportInterface';
+import { Ship } from '../../src/transport';
 
 describe('SeaShipment', function () {
     
@@ -14,6 +14,6 @@ describe('SeaShipment', function () {
 
     it('Transport type is set correctly', () => {
         shipment.send();
-        expect(shipment.transportType).toBe(TransportTypes.SHIP);
+        expect(shipment.getTransportType()).toBeInstanceOf(Ship);
     });
 })

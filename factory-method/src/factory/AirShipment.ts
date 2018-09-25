@@ -1,6 +1,5 @@
 import { Shipment } from './Shipment';
-import { TransportInterface } from '../transport/TransportInterface';
-import { Plane } from '../transport/Plane';
+import { TransportInterface, Plane } from '../transport';
 
 export class AirShipment extends Shipment {
 

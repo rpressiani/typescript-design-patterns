@@ -1,5 +1,5 @@
 import { AirShipment, Shipment } from '../../src/factory';
-import { TransportTypes } from '../../src/transport/TransportInterface';
+import { Plane } from '../../src/transport';
 
 describe('AirShipment', function () {
     
@@ -14,6 +14,6 @@ describe('AirShipment', function () {
 
     it('Transport type is set correctly', () => {
         shipment.send();
-        expect(shipment.transportType).toBe(TransportTypes.PLANE);
+        expect(shipment.getTransportType()).toBeInstanceOf(Plane);
     });
 })

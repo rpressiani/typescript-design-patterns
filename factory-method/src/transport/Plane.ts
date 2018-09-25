@@ -1,11 +1,6 @@
-import { TransportTypes } from './TransportInterface';
 import TransportBase from './TransportBase';
 
-export class Plane extends TransportBase {
-
-    constructor(capacity: number) {
-        super(capacity, TransportTypes.PLANE);
-    }
+export default class Plane extends TransportBase {
 
     load() {
         console.log("Loading plane...");

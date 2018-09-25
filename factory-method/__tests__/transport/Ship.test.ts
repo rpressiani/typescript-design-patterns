@@ -1,4 +1,4 @@
-import { Ship } from '../../src/transport/Ship';
+import { Ship } from '../../src/transport';
 
 describe('Ship', function () {
     let ship: Ship;

@@ -1,5 +1,5 @@
 import { Shipment } from './Shipment';
-import { TransportInterface, Ship } from '../transport';
+import { TransportInterface, Ship } from '../transports';
 
 export class SeaShipment extends Shipment {
 

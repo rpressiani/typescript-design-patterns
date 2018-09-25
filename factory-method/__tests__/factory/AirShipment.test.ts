@@ -1,5 +1,5 @@
 import { AirShipment, Shipment } from '../../src/factory';
-import { Plane } from '../../src/transport';
+import { Plane } from '../../src/transports';
 
 describe('AirShipment', function () {
     

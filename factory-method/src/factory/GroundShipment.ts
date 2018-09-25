@@ -1,5 +1,5 @@
 import { Shipment } from './Shipment';
-import { TransportInterface, Train, Truck } from '../transport';
+import { TransportInterface, Train, Truck } from '../transports';
 
 export enum GroundTransportTypes {
     TRAIN,

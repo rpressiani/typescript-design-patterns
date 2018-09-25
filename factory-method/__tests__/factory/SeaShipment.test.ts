@@ -1,5 +1,5 @@
 import { Shipment, SeaShipment } from '../../src/factory';
-import { Ship } from '../../src/transport';
+import { Ship } from '../../src/transports';
 
 describe('SeaShipment', function () {
     

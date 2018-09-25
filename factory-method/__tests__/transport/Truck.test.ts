@@ -1,4 +1,4 @@
-import { Truck } from '../../src/transport';
+import { Truck } from '../../src/transports';
 
 describe('Truck', function () {
     let truck: Truck;

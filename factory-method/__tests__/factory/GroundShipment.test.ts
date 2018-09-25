@@ -1,5 +1,5 @@
 import { Shipment, GroundShipment } from '../../src/factory'
-import { Truck, Train } from '../../src/transport';
+import { Truck, Train } from '../../src/transports';
 import { GroundTransportTypes } from '../../src/factory/GroundShipment';
 
 describe('GroundShipment', function () {

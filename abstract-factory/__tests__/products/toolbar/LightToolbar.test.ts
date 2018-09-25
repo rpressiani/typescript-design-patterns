@@ -1,5 +1,5 @@
 import { Color } from '../../../src/products/Color';
-import LightToolbar from '../../../src/products/toolbar/LightToolbar';
+import { LightToolbar } from '../../../src/products/toolbar';
 
 describe('LightToolbar', function () {
     

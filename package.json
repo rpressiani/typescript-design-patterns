@@ -49,6 +49,7 @@
     "collectCoverageFrom": [
       "**/*.ts",
       "!**/node_modules/**",
+      "!**/__tests__/**",
       "!**/demo.ts"
     ],
     "globals": {

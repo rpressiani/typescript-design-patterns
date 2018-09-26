@@ -10,4 +10,4 @@ export {
     Ship,
     Train,
     Truck,
-}
+};

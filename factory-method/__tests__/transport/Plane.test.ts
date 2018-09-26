@@ -1,33 +1,33 @@
-import { Plane } from '../../src/transport';
+import { Plane } from '../../src/transports';
 
-describe('Plane', function () {
-    let plane: Plane;
+describe('Plane', () => {
+  let plane: Plane;
 
-    beforeEach(() => {
-        plane = new Plane(42);
-    });
+  beforeEach(() => {
+    plane = new Plane(42);
+  });
 
-    it('Plane capacity is set by constructor', () => {
-        expect(plane.capacity).toBe(42);
-    });
+  it('Plane capacity is set by constructor', () => {
+    expect(plane.capacity).toBe(42);
+  });
 
-    it('Plane is empty before loading', () => {
-        expect(plane.isEmpty()).toBe(true);
-    });
+  it('Plane is empty before loading', () => {
+    expect(plane.isEmpty()).toBe(true);
+  });
 
-    it('Plane is not empty after loading', () => {
-        plane.load();
-        expect(plane.isEmpty()).toBe(false);
-    });
+  it('Plane is not empty after loading', () => {
+    plane.load();
+    expect(plane.isEmpty()).toBe(false);
+  });
 
-    it('Shipment is not delivered if transport is not loaded', () => {
-        plane.deliver();
-        expect(plane.isDelivered()).toBe(false);
-    });
+  it('Shipment is not delivered if transport is not loaded', () => {
+    plane.deliver();
+    expect(plane.isDelivered()).toBe(false);
+  });
 
-    it('Plane is empty after delivering', () => {
-        plane.load();
-        plane.deliver();
-        expect(plane.isEmpty()).toBe(true);
-    });
-})
+  it('Plane is empty after delivering', () => {
+    plane.load();
+    plane.deliver();
+    expect(plane.isEmpty()).toBe(true);
+  });
+});

@@ -9,7 +9,7 @@ describe('ToolbarBase', () => {
     toolbar = new DarkToolbar(10, ['Home', 'Contacts']);
   });
 
-  it('DarkToolbar color is set to blue', () => {
+  it('Toolbar height is set correctly', () => {
     expect(toolbar.getHeight()).toBe(10);
   });
 

@@ -1,5 +1,4 @@
-import DialogBase from '../../../src/products/dialog/DialogBase';
-import { DarkDialog } from '../../../src/products/dialog';
+import { DarkDialog, DialogBase } from '../../../src/products/dialog';
 
 describe('DialogBase', () => {
 

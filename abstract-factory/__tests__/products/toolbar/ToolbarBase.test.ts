@@ -1,6 +1,4 @@
-import { Color } from '../../../src/products/Color';
-import { DarkToolbar } from '../../../src/products/toolbar';
-import ToolbarBase from '../../../src/products/toolbar/ToolbarBase';
+import { ToolbarBase, DarkToolbar } from '../../../src/products/toolbar';
 
 describe('ToolbarBase', () => {
 

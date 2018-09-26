@@ -1,7 +1,7 @@
-import DialogBase from './DialogBase';
+import Dialog from './Dialog';
 import { Color } from '../Color';
 
-export default class LightDialog extends DialogBase {
+export default class LightDialog extends Dialog {
 
   constructor(width: number) {
     super(width, Color.WHITE, Color.BLACK);

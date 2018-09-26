@@ -1,8 +1,8 @@
-import { DarkDialog, DialogBase } from '../../../src/products/dialog';
+import { DarkDialog, Dialog } from '../../../src/products/dialog';
 
 describe('DialogBase', () => {
 
-  let dialog: DialogBase;
+  let dialog: Dialog;
   beforeAll(() => {
     dialog = new DarkDialog(10);
   });

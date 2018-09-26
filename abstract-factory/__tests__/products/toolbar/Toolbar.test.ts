@@ -1,8 +1,8 @@
-import { ToolbarBase, DarkToolbar } from '../../../src/products/toolbar';
+import { DarkToolbar, Toolbar } from '../../../src/products/toolbar';
 
 describe('ToolbarBase', () => {
 
-  let toolbar: ToolbarBase;
+  let toolbar: Toolbar;
   beforeAll(() => {
     toolbar = new DarkToolbar(10, ['Home', 'Contacts']);
   });

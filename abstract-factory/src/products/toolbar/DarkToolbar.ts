@@ -1,7 +1,7 @@
-import ToolbarBase from './ToolbarBase';
+import Toolbar from './Toolbar';
 import { Color } from '../Color';
 
-export default class DarkToolbar extends ToolbarBase {
+export default class DarkToolbar extends Toolbar {
 
   constructor(height: number, links: string[]) {
     super(height, Color.BLUE, links);

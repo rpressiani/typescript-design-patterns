@@ -1,13 +1,13 @@
 import ThemeFactory from './ThemeFactory';
-import { DialogBase, DarkDialog } from '../products/dialog';
-import { ToolbarBase, DarkToolbar } from '../products/toolbar';
+import { DarkDialog } from '../products/dialog';
+import { DarkToolbar } from '../products/toolbar';
 
 export default class DarkTheme implements ThemeFactory{
-  createDialog(width: number): DialogBase {
+  createDialog(width: number) {
     return new DarkDialog(width);
   }
 
-  createToolbar(height: number, links: string[]): ToolbarBase {
+  createToolbar(height: number, links: string[]) {
     return new DarkToolbar(height, links);
   }
 }

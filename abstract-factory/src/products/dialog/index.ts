@@ -1,9 +1,9 @@
-import DialogBase from './DialogBase';
+import Dialog from './Dialog';
 import DarkDialog from './DarkDialog';
 import LightDialog from './LightDialog';
 
 export {
-  DialogBase,
+  Dialog,
   DarkDialog,
   LightDialog,
 };

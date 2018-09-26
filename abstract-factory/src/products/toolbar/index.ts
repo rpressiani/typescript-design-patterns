@@ -1,9 +1,9 @@
-import ToolbarBase from './ToolbarBase';
+import Toolbar from './Toolbar';
 import LightToolbar from './LightToolbar';
 import DarkToolbar from './DarkToolbar';
 
 export {
-  ToolbarBase,
+  Toolbar,
   LightToolbar,
   DarkToolbar,
 };

@@ -3,32 +3,31 @@ import { Color } from '../Color';
 
 export default abstract class ToolbarBase implements UIElementInterface {
 
-    private  _height: number;
-    private _color: Color;
-    private _links: Array<string>;
-    
+  private height: number;
+  private color: Color;
+  private links: string[];
 
-    constructor(height: number, color: Color, links: Array<string>) {
-        this._height = height;
-        this._links = links;
-        this._color = color;
-    }
+  constructor(height: number, color: Color, links: string[]) {
+    this.height = height;
+    this.links = links;
+    this.color = color;
+  }
 
-    abstract render(): string;
+  abstract render(): string;
 
-    public toString = () : string => {
-        return `{${this._height}, ${this._color}, Links[${this._links}]}`;
-    }
+  public toString = () : string => {
+    return `{${this.height}, ${this.color}, Links[${this.links}]}`;
+  }
 
-    get height() {
-        return this._height;
-    }
+  public getHeight(): number {
+    return this.height;
+  }
 
-    get color() {
-        return this._color;
-    }
+  public getColor(): Color {
+    return this.color;
+  }
 
-    get links() {
-        return Array.from(this._links);
-    }   
+  public getLinks(): string[] {
+    return Array.from(this.links);
+  }
 }

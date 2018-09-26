@@ -1,8 +1,8 @@
 export default interface TransportInterface {
-    readonly capacity: number;
+  readonly capacity: number;
 
-    load();
-    deliver();
-    isEmpty();
-    isDelivered();
+  load();
+  deliver();
+  isEmpty();
+  isDelivered();
 }

@@ -2,25 +2,25 @@ import TransportInterface from './TransportInterface';
 
 export default abstract class TransportBase implements TransportInterface {
 
-    capacity: number;
-    protected _empty: boolean;
-    protected _delivered: boolean;
+  capacity: number;
+  protected empty: boolean;
+  protected delivered: boolean;
 
-    constructor(capacity: number) {
-        this.capacity = capacity;
-        this._empty = true;
-        this._delivered = false;
-    }
-    
-    abstract load();
+  constructor(capacity: number) {
+    this.capacity = capacity;
+    this.empty = true;
+    this.delivered = false;
+  }
 
-    abstract deliver();
+  abstract load();
 
-    isEmpty() {
-        return this._empty;
-    }
+  abstract deliver();
 
-    isDelivered() {
-        return this._delivered;
-    }
+  isEmpty() {
+    return this.empty;
+  }
+
+  isDelivered() {
+    return this.delivered;
+  }
 }

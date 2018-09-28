@@ -1,7 +1,7 @@
 import UIElementInterface from '../UIElementInterface';
 import { Color } from '../Color';
 
-export default abstract class DialogBase implements UIElementInterface {
+export default abstract class Dialog implements UIElementInterface {
 
   private width: number;
   private backgroundColor: Color;

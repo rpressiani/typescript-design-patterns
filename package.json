@@ -58,5 +58,8 @@
         "tsConfig": "tsconfig.json"
       }
     }
+  },
+  "dependencies": {
+    "readline": "^1.3.0"
   }
 }

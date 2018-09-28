@@ -5,6 +5,7 @@
 
 ### Creational
 * [Factory Method](https://github.com/rpressiani/typescript-design-patterns/tree/master/factory-method)
+* [Abstract Factory](https://github.com/rpressiani/typescript-design-patterns/tree/master/abstract-factory)
 * [Singleton](https://github.com/rpressiani/typescript-design-patterns/tree/master/singleton)
 
 ## Usage
@@ -26,7 +27,5 @@ git clone https://github.com/rpressiani/typescript-design-patterns.git
 ```
 npm install
 ```
-#### Run tests
-```
-npm test
-```
+#### Run demos
+Every design pattern has a demo that can be run. Move in the specific directory to read instructions on how to compile and run the demo.

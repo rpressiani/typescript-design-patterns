@@ -1,26 +1,26 @@
 import { TransportInterface } from '../transports';
 
 export abstract class Shipment {
-    private _goods: number;
-    private _transport: TransportInterface;
-    
-    protected abstract addTransport(): TransportInterface;
+  private goods: number;
+  private transport: TransportInterface;
 
-    constructor(goods: number) {
-        this._goods = goods;
-    }
+  protected abstract addTransport(): TransportInterface;
 
-    send(): void {
-        this._transport = this.addTransport();
-        this._transport.load();
-        this._transport.deliver();
-    }
+  constructor(goods: number) {
+    this.goods = goods;
+  }
 
-    getTransportType() {
-        return this._transport;
-    }
+  send(): void {
+    this.transport = this.addTransport();
+    this.transport.load();
+    this.transport.deliver();
+  }
 
-    get goods(): number {
-        return this._goods;
-    }
+  public getTransportType(): TransportInterface {
+    return this.transport;
+  }
+
+  public getGoods(): number {
+    return this.goods;
+  }
 }
